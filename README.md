@@ -22,7 +22,7 @@
 使用的开源库
 ---
 ```
-	compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
 	
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'io.reactivex:rxjava:1.1.0'
@@ -36,6 +36,7 @@
     
     compile 'ren.qinc.edit:lib:0.0.2'
 ```
+
 
 感谢
 ---
