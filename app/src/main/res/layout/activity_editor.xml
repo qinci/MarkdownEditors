@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    style="@style/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shadow"
+    tools:context=".view.EditorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_common_toolbar_scroll"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ren.qinc.markdowneditors.lib.ExpandableLinearLayout
+                android:id="@+id/action_other_operate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:el_duration="400"
+                app:el_expanded="false">
+
+                <ren.qinc.markdowneditors.widget.TabIconView
+                    android:id="@+id/tabIconView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_expandable="true"/>
+
+            </ren.qinc.markdowneditors.lib.ExpandableLinearLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shadow"/>
+        </FrameLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

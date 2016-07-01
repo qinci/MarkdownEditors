@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        android:orderInCategory="97"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_copy_url"
+        android:title="@string/action_copy_url"
+        android:orderInCategory="98"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_open_url"
+        android:title="@string/action_open_url"
+        android:orderInCategory="99"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_clear_cache"
+        android:title="@string/action_clear_cache"
+        android:orderInCategory="99"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_clear_cookie"
+        android:title="@string/action_clear_cookie"
+        android:orderInCategory="99"
+        app:showAsAction="never"/>
+
+</menu>

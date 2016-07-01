@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        <!--<item name="android:windowTranslucentNavigation">false</item>-->
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--设置可以绘制-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="actionModeCloseDrawable">?android:actionModeCloseDrawable</item>
+        <item name="actionModeShareDrawable">?android:actionModeShareDrawable</item>
+    </style>
+
+
+</resources>

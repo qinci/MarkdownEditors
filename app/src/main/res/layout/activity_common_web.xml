@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/root"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_common_toolbar_with_title_view" />
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/progressbar"
+        style="@style/NumberProgressBar_Funny_Orange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:progress_text_color="@color/colorAccent"
+        app:progress_reached_bar_height="2dp"
+        app:progress_reached_color="#259b24"
+        app:progress_text_size="8sp"
+        app:progress_text_visibility="invisible"
+        app:progress_unreached_bar_height="2dp"
+        app:progress_unreached_color="#9e9e9e" />
+
+    <ren.qinc.markdowneditors.widget.ObservableWebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

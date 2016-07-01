@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.TextInputLayout android:id="@+id/input_hint"
+                                               xmlns:android="http://schemas.android.com/apk/res/android"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="wrap_content"
+                                               android:layout_marginLeft="@dimen/space_25"
+                                               android:layout_marginRight="@dimen/space_25">
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/please_enter"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorDialogMessage"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:singleLine="true"/>
+
+</android.support.design.widget.TextInputLayout>

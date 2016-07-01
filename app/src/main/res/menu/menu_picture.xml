@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_share"
+        android:title="@string/action_share"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_share_white"/>
+
+    <item
+        android:id="@+id/action_save"
+        android:title="@string/action_share"
+        android:orderInCategory="99"
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_save_white"/>
+</menu>

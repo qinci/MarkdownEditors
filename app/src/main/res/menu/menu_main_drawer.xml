@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<group android:checkableBehavior="single" ">-->
+    <!--<item-->
+    <!--android:id="@+id/nav_camera"-->
+    <!--android:icon="@drawable/ic_menu_camera"-->
+    <!--android:checked="true"-->
+    <!--android:title="Import" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_gallery"-->
+    <!--android:icon="@drawable/ic_menu_gallery"-->
+    <!--android:title="Gallery" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_slideshow"-->
+    <!--android:icon="@drawable/ic_menu_slideshow"-->
+    <!--android:title="Slideshow" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_manage"-->
+    <!--android:icon="@drawable/ic_menu_manage"-->
+    <!--android:title="Tools" />-->
+    <!--</group>-->
+
+    <item android:checkableBehavior="single" android:title="存储">
+        <menu>
+            <item
+                android:id="@+id/localhost"
+                android:checkable="true"
+                android:icon="@drawable/ic_phone"
+                android:title="本地"/>
+            <item
+                android:id="@+id/other"
+                android:checkable="false"
+                android:icon="@drawable/ic_dropbox"
+                android:title="其他"/>
+        </menu>
+    </item>
+    <item android:title="其他">
+        <menu>
+            <item
+                android:id="@+id/menu_helper"
+                android:icon="@drawable/ic_help"
+                android:title="参考语法"/>
+            <!--<item-->
+                <!--android:id="@+id/menu_setting"-->
+                <!--android:icon="@drawable/ic_settings"-->
+                <!--android:title="设置"/>-->
+            <item
+                android:id="@+id/menu_update"
+                android:icon="@drawable/ic_settings"
+                android:title="检测更新"/>
+            <!--<item-->
+            <!--android:icon="@drawable/ic_message"-->
+            <!--android:title="反馈" />-->
+            <item android:id="@+id/menu_about"
+                  android:icon="@drawable/ic_information"
+                  android:title="关于"/>
+        </menu>
+    </item>
+
+</menu>

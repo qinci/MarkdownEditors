@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2016. SHENQINCI(沈钦赐)<946736079@qq.com>
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="Description" >Description</string>
+    <string name="sure">sure</string>
+    <string name="serverurl">test</string>
+    <string name="please_enter">please input</string>
+    <string name="create_folder">Create Folder</string>
+    <string name="contact_me">Contact with us</string>
+    <string name="connect_with_us">Contact with us</string>
+    <string name="about">about</string>
+    <string name="action_copy">copy</string>
+    <string name="action_create_file">create</string>
+    <string name="action_copy_url">copy link</string>
+    <string name="action_cut">cut</string>
+    <string name="action_delete">delete</string>
+    <string name="action_edit">edit</string>
+    <string name="action_helper">helper</string>
+    <string name="action_open_url">open url</string>
+    <string name="action_other_operate">other</string>
+    <string name="action_paste">paste</string>
+    <string name="action_preview">preview</string>
+    <string name="action_redo">redo</string>
+    <string name="action_refresh">refresh</string>
+    <string name="action_clear_cookie">clear cookie</string>
+    <string name="action_clear_cache">clear cache</string>
+    <string name="action_cancel">cancel</string>
+    <string name="MainFileManagerNoPost">empty</string>
+    <string name="MainFileManagerCreateHint">you can create</string>
+    <string name="action_rename">rename</string>
+    <string name="action_save">save</string>
+    <string name="action_search">search</string>
+    <string name="action_setting">setting</string>
+    <string name="action_share">share</string>
+    <string name="action_undo">undo</string>
+    <string name="advertise_with_us">advertise whith us</string>
+    <string name="file">file</string>
+    <string name="menu_web_horizontal">horizontal</string>
+    <string name="menu_web_vertical">vertical</string>
+    <string name="navigation_drawer_close" >Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="share_copy_text">Copy text</string>
+    <string name="share_html">Share html</string>
+    <string name="share_md">Share md</string>
+    <string name="share_png">Share png</string>
+    <string name="share_text">Share text</string>
+</resources>

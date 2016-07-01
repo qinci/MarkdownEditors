@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#607D8B</color>-->
+    <!--<color name="colorPrimaryDark">#455A64</color>-->
+    <!--<color name="colorPrimaryLight">#CFD8DC</color>&lt;!&ndash;一般用于colorPrimary为背景的文字颜色&ndash;&gt;-->
+    <!--<color name="colorAccent">#607D8B</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#727272</color>-->
+    <!--<color name="ColorDivider">#B6B6B6</color>-->
+    <color name="colorPrimary">#795548</color>
+    <color name="colorPrimary66">#66795548</color>
+    <color name="colorPrimaryTransparent">#99795548</color>
+    <color name="colorPrimaryDark">#795548</color>
+    <color name="colorPrimaryDarkReal">#4D342B</color>
+    <color name="colorPrimaryLight">#CFD8DC</color><!--一般用于colorPrimary为背景的文字颜色-->
+    <color name="colorAccent">#795548</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorDivider">#B6B6B6</color>
+
+    <color name="colorDialogMessage">#8a000000</color>
+
+    <!-- 常用颜色值 -->
+    <color name="white40">#40FFFFFF</color>
+    <color name="white125">#88FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_de">#DE000000</color>
+    <color name="gray">#808080</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFD700</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="blue">#0000FF</color>
+    <color name="purple">#800080</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="orange">#FFA500</color>
+
+    <color name="background">#E1E1E1</color>
+
+
+    <color name="c_7c7c7c">#7c7c7c</color>
+    <color name="c_595959">#595959</color>
+    <color name="c_e1e1e1">#e1e1e1</color>
+</resources>

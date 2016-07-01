@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- base activity相关id -->
+    <item name="id_navigation_view" type="id"/><!--侧滑菜单-->
+    <item name="id_drawer_layout" type="id"/><!--侧滑菜单-->
+    <item name="id_toolbar" type="id"/><!--toolbar-->
+    <item name="id_appbar" type="id"/><!--toolbar-->
+    <item name="id_refresh" type="id"/><!--下拉刷新-->
+
+    <item name="id_fragment_root" type="id"/>
+    <item name="tag" type="id"/>
+
+    <item name="statusbar_view" type="id"/>
+    <item name="translucent_view" type="id"/>
+
+    <!--编辑操作的id-->
+    <item name="id_shortcut_console" type="id"/><!-- 代码行 -->
+    <item name="id_shortcut_format_header_1" type="id"/><!-- -->
+    <item name="id_shortcut_format_header_2" type="id"/><!-- -->
+    <item name="id_shortcut_format_header_3" type="id"/><!-- -->
+    <item name="id_shortcut_format_header_4" type="id"/><!-- -->
+    <item name="id_shortcut_format_header_5" type="id"/><!-- -->
+    <item name="id_shortcut_format_header_6" type="id"/><!--  -->
+    <item name="id_shortcut_format_italic" type="id"/><!-- 斜体 -->
+    <item name="id_shortcut_format_bold" type="id"/><!-- 粗体 -->
+    <item name="id_shortcut_list_bulleted" type="id"/><!-- 列表 -->
+    <item name="id_shortcut_format_numbers" type="id"/><!-- 数字列表  -->
+    <item name="id_shortcut_format_quote" type="id"/><!--引用-->
+    <item name="id_shortcut_format_strikethrough" type="id"/><!-- 字体划线 -->
+    <item name="id_shortcut_grid" type="id"/><!-- 插入表格 -->
+    <item name="id_shortcut_insert_link" type="id"/><!-- 插入链接 -->
+    <item name="id_shortcut_insert_photo" type="id"/><!-- 插入图片 -->
+    <item name="id_shortcut_minus" type="id"/><!-- 分割线 -->
+    <item name="id_shortcut_xml" type="id"/><!-- 代码 -->
+
+</resources>
