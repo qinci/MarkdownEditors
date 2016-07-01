@@ -26,6 +26,7 @@ import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import ren.qinc.markdowneditors.AppContext;
 import ren.qinc.markdowneditors.R;
 import ren.qinc.markdowneditors.base.BaseActivity;
 import ren.qinc.markdowneditors.base.BaseToolbarActivity;
@@ -42,6 +43,8 @@ public class AboutActivity extends BaseToolbarActivity {
     TextView version;
     @Bind(R.id.description)
     TextView description;
+    private static final String MAIL = "mailto:qq@qinc.me";
+
     @Override
     public int getLayoutId() {
         return R.layout.activity_about;
@@ -79,15 +82,32 @@ public class AboutActivity extends BaseToolbarActivity {
 
     }
 
+
     @OnClick(R.id.contact_me)
     protected void contackMe(){
-        Uri uri = Uri.parse("mailto:qq@qinci.me");
+        Uri uri = Uri.parse(MAIL);
         Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
         //intent.putExtra(Intent.EXTRA_CC, email); // 抄送人
-        // intent.putExtra(Intent.EXTRA_SUBJECT, "这是邮件的主题部分"); // 主题
+         intent.putExtra(Intent.EXTRA_SUBJECT, "MarkdownEditor用户"); // 主题
         // intent.putExtra(Intent.EXTRA_TEXT, "这是邮件的正文部分"); // 正文
-        this.startActivity(intent);
-//        Intent.createChooser(intent, "请选择邮件类应用")
+        try {
+            this.startActivity(intent);
+        }catch (Exception e){
+            AppContext.showSnackbar(getWindow().getDecorView(),"找不到邮箱应用!");
+        }
+    }
+    @OnClick(R.id.ad_contact_me)
+    protected void adContackMe(){
+        Uri uri = Uri.parse(MAIL);
+        Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+        //intent.putExtra(Intent.EXTRA_CC, email); // 抄送人
+         intent.putExtra(Intent.EXTRA_SUBJECT, "广告联系"); // 主题
+        // intent.putExtra(Intent.EXTRA_TEXT, "这是邮件的正文部分"); // 正文
+        try {
+            this.startActivity(intent);
+        }catch (Exception e){
+            AppContext.showSnackbar(getWindow().getDecorView(),"找不到邮箱应用!");
+        }
     }
 
 

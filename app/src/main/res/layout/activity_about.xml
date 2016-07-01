@@ -71,6 +71,7 @@
                 android:background="@color/c_e1e1e1"/>
             <!-- ================= -->
             <TextView
+                android:id="@+id/ad_contact_me"
                 style="@style/about_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
