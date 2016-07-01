@@ -55,36 +55,11 @@
 
 已完成功能的截图
 ---
-
-* 首页文件列表
- ![首页列表](image/image_1.png)
- ![首页列表](image/image_2.png)
-* 文件夹为空
- ![列表空](image/image_3.png)
-* 长按选择一个
- ![列表空](image/image_4.png)
-* 长按选择多个
- ![列表空](image/image_5.png)
-* 选择复制或者粘贴后
- ![列表空](image/image_6.png)
-* 选择单个可以进行重命名
- ![列表空](image/image_7.png)
-* 批量删除
- ![列表空](image/image_8.png)
-* 搜索当前文件夹
- ![列表空](image/image_10.png)
-* 支持横屏
- ![列表空](image/image_11.png)
-* 菜单
- ![列表空](image/image_12.png)
-* 编辑界面
- ![列表空](image/image_13.png)
-* 编辑界面隐藏快捷操作
- ![列表空](image/image_17.png)
-* 预览界面
- ![列表空](image/image_14.png)
-* 横屏
- ![列表空](image/image_15.png)
+![Image](image/image_new_01.jpg)
+![Image](image/image_new_02.jpg)
+![Image](image/image_new_05.jpg)
+![Image](image/image_new_03.jpg)
+![Image](image/image_new_04.jpg)
  
 
 #### 动态图
