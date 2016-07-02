@@ -14,6 +14,8 @@
 
 > 功能本身不难，但是细节很多
 
+> 部分界面和功能仿未开源的MarkdownX软件
+
 其他
 ---
 用了MVP+Rxjava
@@ -21,26 +23,20 @@
 
 使用的开源库
 ---
-```
-    compile 'com.github.bumptech.glide:glide:3.6.1'
-	
-    compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'io.reactivex:rxjava:1.1.0'
-    
-    compile 'com.jakewharton:butterknife:7.0.1'
-    compile 'com.daimajia.numberprogressbar:library:1.2@aar'
-    
-    compile 'com.kaopiz:kprogresshud:1.0.5'
-    
-    compile 'com.github.michael-rapp:android-bottom-sheet:1.3.0'
-    
-    compile 'ren.qinc.edit:lib:0.0.2'
-```
-
+* glide
+* rxjava
+* butterknife
+* numberprogressbar
+* kprogresshud
+* android-bottom-sheet
+* marked
+* SystemBarUtils
+* 编辑中的撤销和恢复已经提取为单独的库[AndroidEdit] (https://github.com/qinci/AndroidEdit)
 
 感谢
 ---
 感谢默默为开源不遗余力做出努力的小伙伴，本项目是站在巨人的肩膀上。
+
 **欢迎star、fork**
 
 未完成的功能（后续版本要完成的功能）

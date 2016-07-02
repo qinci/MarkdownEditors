@@ -19,7 +19,7 @@ package ren.qinc.markdowneditors.engine;
 import android.os.CountDownTimer;
 
 /**
- * 倒计时封装
+ * 倒计时封装(后面定时保存用)
  * Created by 沈钦赐 on 16/1/5.
  */
 public class Countdown extends CountDownTimer{
