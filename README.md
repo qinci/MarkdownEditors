@@ -64,5 +64,8 @@
 
 ![首页图片](image/markdown.gif)
 
+
+历史版本
 ---
+[v0.1](https://github.com/qinci/MarkdownEditors/tree/v0.1)
 
