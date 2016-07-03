@@ -8,6 +8,8 @@
 
 [91市场下载地址](http://apk.91.com/Soft/Android/ren.qinc.markdowneditors-1-0.1.html)
 
+[安卓市场下载地址](http://apk.hiapk.com/appinfo/ren.qinc.markdowneditors/1)
+
 基于Android的Markdown编辑器
 
 > 第一个版本，可能存在bug，欢迎指正
