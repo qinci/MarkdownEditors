@@ -36,7 +36,7 @@ public class CommonImageDetailsActivity extends BaseToolbarActivity {
     public static final String EXTRA_IMAGE_TITLE = "image_title";
     public static final String TRANSIT_PIC = "picture";
 
-    protected static  ImageView imageView;
+    protected static ImageView imageView;
     @Bind(R.id.tv_title)
     protected TextSwitcher textSwitcher;
 

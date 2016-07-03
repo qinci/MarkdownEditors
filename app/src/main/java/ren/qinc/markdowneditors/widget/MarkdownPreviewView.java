@@ -22,15 +22,16 @@ import android.os.Build.VERSION;
 import android.support.v4.widget.NestedScrollView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.LinearLayout;
 
 import ren.qinc.markdowneditors.base.BaseWebActivity;
-import ren.qinc.markdowneditors.utils.Check;
 
+/**
+ * Markdown View
+ * The type Markdown preview view.
+ */
 public class MarkdownPreviewView extends NestedScrollView {
     public WebView mWebView;
     private Context mContext;

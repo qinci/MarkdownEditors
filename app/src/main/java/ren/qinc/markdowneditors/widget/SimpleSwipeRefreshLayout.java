@@ -9,6 +9,7 @@ import android.widget.AbsListView;
 public class SimpleSwipeRefreshLayout extends SwipeRefreshLayout {
 
     private View view;
+
     public SimpleSwipeRefreshLayout(Context context) {
         super(context);
     }

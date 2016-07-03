@@ -32,7 +32,7 @@
 * kprogresshud
 * android-bottom-sheet
 * marked
-* SystemBarUtils
+* FlycoSystemBar
 * 编辑中的撤销和恢复已经提取为单独的库[AndroidEdit] (https://github.com/qinci/AndroidEdit)
 
 感谢

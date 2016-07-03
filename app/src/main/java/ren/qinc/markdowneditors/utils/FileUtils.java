@@ -111,7 +111,7 @@ public class FileUtils {
     /**
      * 获取文件目录
      *
-     * @param context  the mContext
+     * @param context the mContext
      * @return file
      */
     public static String getFile(@NonNull Context context) {
@@ -129,6 +129,7 @@ public class FileUtils {
         }
         return savedir.getAbsolutePath();
     }
+
     /**
      * Gets root path.
      *

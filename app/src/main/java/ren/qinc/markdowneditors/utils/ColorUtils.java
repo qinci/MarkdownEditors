@@ -25,6 +25,13 @@ import android.support.annotation.IntRange;
  */
 public class ColorUtils {
 
+    /**
+     * 改变color值的透明度
+     *
+     * @param RGBValues rgb颜色值
+     * @param alpha     透明度 0-255
+     * @return the alpha color
+     */
     public static int getAlphaColor(@ColorInt int RGBValues, @IntRange(from = 0, to = 255) int alpha) {
         int red = RGBValues >> 16 & 0xFF;
         int green = RGBValues >> 8 & 0xFF;

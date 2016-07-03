@@ -19,7 +19,6 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -29,7 +28,6 @@ import com.pgyersdk.update.UpdateManagerListener;
 
 import ren.qinc.markdowneditors.AppContext;
 import ren.qinc.markdowneditors.R;
-import ren.qinc.markdowneditors.base.BaseApplication;
 import ren.qinc.markdowneditors.base.BaseDrawerLayoutActivity;
 import ren.qinc.markdowneditors.base.BaseFragment;
 import ren.qinc.markdowneditors.utils.Toast;
@@ -84,7 +82,7 @@ public class MainActivity extends BaseDrawerLayoutActivity {
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.localhost ) {//|| id == R.id.other
+        if (id == R.id.localhost) {//|| id == R.id.other
             if (id == currentMenuId) {
                 return false;
             }
@@ -126,7 +124,7 @@ public class MainActivity extends BaseDrawerLayoutActivity {
                 initUpdate(true);
                 return true;
             case R.id.other:
-                AppContext.showSnackbar(getWindow().getDecorView(),"敬请期待");
+                AppContext.showSnackbar(getWindow().getDecorView(), "敬请期待");
                 return true;
         }
         return super.onOptionsItemSelected(item);// || mCurrentFragment.onOptionsItemSelected(item);

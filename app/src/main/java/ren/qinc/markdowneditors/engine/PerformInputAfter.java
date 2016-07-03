@@ -19,7 +19,6 @@ package ren.qinc.markdowneditors.engine;
 import android.support.annotation.NonNull;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.widget.EditText;
 
 import ren.qinc.markdowneditors.utils.Check;
@@ -60,7 +59,6 @@ public class PerformInputAfter {
             if (end > start && end <= s.length()) {
                 CharSequence charSequence = s.subSequence(start, end);
                 if (charSequence.length() > 0) {
-//                    Log.i("test", "beforeTextChanged:" + charSequence + " start" + start + " count" + count + " after" + after);
                     onSubText(s, charSequence, start);
 
                 }
@@ -82,7 +80,6 @@ public class PerformInputAfter {
             if (end > start) {
                 CharSequence charSequence = s.subSequence(start, end);
                 if (charSequence.length() > 0) {
-//                    Log.i("test", "onTextChanged:" + charSequence + " start" + start + " before" + before + " count" + count);
                     onAddText(s, charSequence, start);
                 }
             }
@@ -107,7 +104,6 @@ public class PerformInputAfter {
     }
 
     private void onSubText(CharSequence source, CharSequence charSequence, int start) {
-        Log.i("test", "删除:" + charSequence + " start" + start + " before");
         flag = true;
         //操作代码
 
@@ -128,29 +124,30 @@ public class PerformInputAfter {
         int lastEnter = tempStr.lastIndexOf(10);
         if (lastEnter > 0) {
             //最后一个回车到输入回车之间的字符
-            tempStr = tempStr.substring(lastEnter+1, start);
+            tempStr = tempStr.substring(lastEnter + 1, start);
         }
 
         String mString = tempStr.trim();
-        String startSpace = getStartChar(tempStr,' ');
+        String startSpace = getStartChar(tempStr, ' ');
 
-        if (mString.startsWith("* ") && mString.length() > 2) {//*开头
-            editable.insert(start+1, startSpace + "* ");
-        } else if (mString.startsWith("1. ") && mString.length() > 3) {//*开头
-            editable.insert(start+1, startSpace + "1. ");
-        }else if(mString.length() > 1){
-            editable.insert(start+1, startSpace);
+        if (mString.startsWith("* ") && mString.length() > 2) {//* 开头
+            editable.insert(start + 1, startSpace + "* ");
+        } else if (mString.startsWith("1. ") && mString.length() > 3) {//1. 开头
+            editable.insert(start + 1, startSpace + "1. ");
+        } else if (mString.length() > 1) {
+            editable.insert(start + 1, startSpace);
         }
 
     }
 
     /**
      * 获取开头的字符
+     *
      * @param target
      * @param startChar
      * @return
      */
-    private String getStartChar(String target,char startChar) {
+    private String getStartChar(String target, char startChar) {
         StringBuilder sb = new StringBuilder();
         char[] chars = target.toCharArray();
         for (char aChar : chars) {

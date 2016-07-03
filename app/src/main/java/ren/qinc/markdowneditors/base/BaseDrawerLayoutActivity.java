@@ -1,3 +1,19 @@
+/*
+ * Copyright 2016. SHENQINCI(沈钦赐)<946736079@qq.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package ren.qinc.markdowneditors.base;
 
 import android.content.res.ColorStateList;
@@ -33,16 +49,17 @@ public abstract class BaseDrawerLayoutActivity extends BaseToolbarActivity imple
     @Override
     protected void init() {
         super.init();
-        if (mDrawerLayout == null || mNavigationView == null) // 如果布局文件没有找到toolbar,则不设置actionbar
-        {
+        // 如果要用这个类,这两个东西不能为空
+        if (mDrawerLayout == null || mNavigationView == null) {
             throw new IllegalStateException(this.getClass().getSimpleName() + ":要使用BaseDrawerLayoutActivity，必须在布局里面增加id为‘id_drawer’的DrawerLayout");
         }
         initDrawer();
     }
 
     protected void initStatusBar() {
-        SystemBarUtils.tintStatusBarForDrawer(this,mDrawerLayout, getResources().getColor(R.color.colorPrimary));
+        SystemBarUtils.tintStatusBarForDrawer(this, mDrawerLayout, getResources().getColor(R.color.colorPrimary));
     }
+
     private void initDrawer() {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, mDrawerLayout, getToolbar(), R.string.navigation_drawer_open, R.string.navigation_drawer_close);

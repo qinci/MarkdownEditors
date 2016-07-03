@@ -16,8 +16,6 @@
 
 package ren.qinc.markdowneditors.engine;
 
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 
@@ -106,7 +104,7 @@ public class PerformEditable implements View.OnClickListener {
 
 
         if (line != -1) {
-            selectionStart = line+1;
+            selectionStart = line + 1;
         } else {
             selectionStart = 0;
         }
@@ -389,7 +387,6 @@ public class PerformEditable implements View.OnClickListener {
         return source.charAt(startStr.length() - 1) == 10 && source.charAt(startStr.length()) == 10;
 
     }
-
 
 
 }

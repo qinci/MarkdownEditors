@@ -76,6 +76,7 @@ public class SystemUtils {
         ((InputMethodManager) BaseApplication.context().getSystemService(Context.INPUT_METHOD_SERVICE))
                 .hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
+
     /***
      * 获取activity的宽度
      *
@@ -123,7 +124,7 @@ public class SystemUtils {
      * @return version
      * @throws Exception
      */
-    public static String getAppVersion(Context context){
+    public static String getAppVersion(Context context) {
         // 获取packagemanager的实例
         PackageManager packageManager = context.getPackageManager();
         // getPackageName()是你当前类的包名，0代表是获取版本信息
@@ -236,12 +237,12 @@ public class SystemUtils {
      * @return the phone msg
      * @throws Exception the exception
      */
-    public static String getPhoneMsg(Context context) throws Exception{
+    public static String getPhoneMsg(Context context) throws Exception {
         return "手机型号: " + Build.MODEL + ",\nSDK版本:"
                 + Build.VERSION.SDK + ",\n系统版本:"
-                + Build.VERSION.RELEASE+
-                ",软件版本:"+getAppVersion(context)+
-                ",软件版本号:"+getAppVersionCode(context);
+                + Build.VERSION.RELEASE +
+                ",软件版本:" + getAppVersion(context) +
+                ",软件版本号:" + getAppVersionCode(context);
 
     }
 
@@ -265,11 +266,12 @@ public class SystemUtils {
      * @return
      */
     public static int barHeight = 0;
+
     public static int getStatusBarHeight() {
         if (barHeight > 0) {
             return barHeight;
         }
-        if(BaseApplication.context()==null){
+        if (BaseApplication.context() == null) {
             return 0;
         }
         Class<?> c;
@@ -283,7 +285,7 @@ public class SystemUtils {
             x = Integer.parseInt(field.get(obj).toString());
             barHeight = BaseApplication.context().getResources().getDimensionPixelSize(x);
         } catch (Exception e1) {
-            Log.i("test","状态栏高度获取失败了");
+            Log.i("test", "状态栏高度获取失败了");
         }
         return barHeight;
     }

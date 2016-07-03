@@ -39,7 +39,7 @@ public class RxEvent {
 
     public RxEvent(int type, Object... obj) {
         this.type = type;
-        if(obj!=null){
+        if (obj != null) {
             this.o = obj;
         }
     }
@@ -49,7 +49,7 @@ public class RxEvent {
     }
 
     public boolean isTypeAndData(int type) {
-        return isType(type) && o.length>0;
+        return isType(type) && o.length > 0;
     }
 
 

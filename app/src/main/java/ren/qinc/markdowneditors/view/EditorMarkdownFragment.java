@@ -17,19 +17,14 @@
 package ren.qinc.markdowneditors.view;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.Bind;
-import ren.qinc.markdowneditors.AppContext;
 import ren.qinc.markdowneditors.R;
 import ren.qinc.markdowneditors.base.BaseFragment;
 import ren.qinc.markdowneditors.event.RxEvent;
-import ren.qinc.markdowneditors.utils.SystemBarUtils;
 import ren.qinc.markdowneditors.widget.MarkdownPreviewView;
 
 /**
@@ -56,7 +51,7 @@ public class EditorMarkdownFragment extends BaseFragment {
     @Override
     public boolean hasNeedEvent(int type) {
         //接受刷新数据
-        return  type == RxEvent.TYPE_REFRESH_DATA;
+        return type == RxEvent.TYPE_REFRESH_DATA;
     }
 
     boolean isPageFinish = false;

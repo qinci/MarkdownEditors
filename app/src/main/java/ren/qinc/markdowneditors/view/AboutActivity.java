@@ -29,7 +29,6 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import ren.qinc.markdowneditors.AppContext;
 import ren.qinc.markdowneditors.R;
-import ren.qinc.markdowneditors.base.BaseActivity;
 import ren.qinc.markdowneditors.base.BaseToolbarActivity;
 import ren.qinc.markdowneditors.base.BaseWebActivity;
 import ren.qinc.markdowneditors.utils.SystemBarUtils;

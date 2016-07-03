@@ -15,7 +15,6 @@
  */
 package ren.qinc.markdowneditors.utils;
 
-import java.io.File;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -39,6 +38,12 @@ public class UnitsUtils {
         }
     };
 
+    /**
+     * 时间转换成中文
+     *
+     * @param time the time
+     * @return the string
+     */
     public static String friendlyTime(Date time) {
 
         if (time == null) {
@@ -77,7 +82,7 @@ public class UnitsUtils {
             ftime = "前天";
         } else if (days > 2 && days < 31) {
             ftime = days + "天前";
-        }else if(days <365){
+        } else if (days < 365) {
             ftime = dateFormater2.get().format(time);
         }
 //        else if (days >= 31 && days <= 2 * 31) {
@@ -103,7 +108,7 @@ public class UnitsUtils {
     public static String getFormatSize(double size) {
         double kiloByte = size / 1024;
         if (kiloByte < 1) {
-             return size + "Byte";
+            return size + "Byte";
         }
 
         double megaByte = kiloByte / 1024;

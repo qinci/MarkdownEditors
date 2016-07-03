@@ -1,9 +1,23 @@
+/*
+ * Copyright 2016. SHENQINCI(沈钦赐)<946736079@qq.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package ren.qinc.markdowneditors.base;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -127,6 +141,7 @@ public abstract class BaseFragment extends BaseStatedFragment implements BaseVie
     public boolean hasNeedEvent(int type) {
         return type == RxEvent.TYPE_FINISH;
     }
+
     @Override
     public void onEventMainThread(RxEvent e) {
         if (e.type == RxEvent.TYPE_FINISH && e.o.length > 0) {
@@ -135,53 +150,10 @@ public abstract class BaseFragment extends BaseStatedFragment implements BaseVie
     }
 
 
-
     public boolean hasMenu() {
         return false;
     }
 
-//    /**
-//     * 代替findViewById 自动类型转换
-//     *
-//     * @param id
-//     * @return View
-//     */
-//    @SuppressWarnings("unchecked")
-//    @Deprecated
-//    protected final <T extends View> T findView(@IdRes int id) {
-//        if (rootView == null) {
-//            return null;
-//        }
-//        return (T) rootView.findViewById(id);
-//    }
-//
-//    /**
-//     * 设置view的点击事件
-//     * Set view click listener t.
-//     *
-//     * @param <T>           the type parameter
-//     * @param v             the v
-//     * @param clickListener the click listener
-//     * @return the t
-//     */
-//    protected final <T extends View> T setViewClickListener(T v, @NonNull View.OnClickListener clickListener) {
-//        if (v == null) return null;
-//        v.setOnClickListener(clickListener);
-//        return v;
-//    }
-//
-//    /**
-//     * Set view click listener by id t.
-//     *
-//     * @param <T>           the type parameter
-//     * @param id            the id
-//     * @param clickListener the click listener
-//     * @return the t
-//     */
-//    @SuppressWarnings("unchecked")
-//    protected final <T extends View> T setViewClickListenerById(@IdRes int id, @NonNull View.OnClickListener clickListener) {
-//        return setViewClickListener((T) findView(id), clickListener);
-//    }
 
     /**
      * 返回键，预留给所在activity调用
@@ -223,8 +195,6 @@ public abstract class BaseFragment extends BaseStatedFragment implements BaseVie
     @Override
     protected void onSaveState(Bundle outState) {
         super.onSaveState(outState);
-        // For example:
-        //outState.putString("text", tvSample.getText().toString());
     }
 
     /**
@@ -233,8 +203,6 @@ public abstract class BaseFragment extends BaseStatedFragment implements BaseVie
     @Override
     protected void onRestoreState(Bundle savedInstanceState) {
         super.onRestoreState(savedInstanceState);
-        // For example:
-        //tvSample.setText(savedInstanceState.getString("text"));
     }
 
 }

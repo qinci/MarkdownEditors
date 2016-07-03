@@ -59,8 +59,9 @@ public interface IFolderManagerView extends IMvpView {
      * @param position the position
      * @param bean     the bean
      */
-    void updatePosition(int position,FileBean bean);
-    void addFilePosition(int position,FileBean bean);
+    void updatePosition(int position, FileBean bean);
+
+    void addFilePosition(int position, FileBean bean);
 
 
 }

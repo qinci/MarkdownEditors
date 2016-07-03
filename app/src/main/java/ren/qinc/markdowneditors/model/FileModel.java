@@ -15,9 +15,10 @@ import rx.Observable;
 public class FileModel implements IFileModel {
     private static FileModel instance = new FileModel();
 
-    private FileModel(){
+    private FileModel() {
 
     }
+
     public static FileModel getInstance() {
         return instance;
     }
@@ -26,7 +27,7 @@ public class FileModel implements IFileModel {
     public Observable<FileBean> getFileBeanObservable(File file) {
         if (file == null)
             return null;
-        return Observable.just(getFile(file,file.getName()));
+        return Observable.just(getFile(file, file.getName()));
     }
 
     @Override

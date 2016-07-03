@@ -20,6 +20,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 
 /**
+ * TextWatcher适配
  * Created by 沈钦赐 on 16/6/30.
  */
 public class TextWatcherAdapter implements TextWatcher {

@@ -124,6 +124,7 @@ public class EditorFragment extends BaseFragment implements IEditorFragmentView,
             mPresenter.loadFile();
     }
 
+
     @Override
     public void initData() {
     }
@@ -236,15 +237,15 @@ public class EditorFragment extends BaseFragment implements IEditorFragmentView,
     private void shareMenu() {
         SystemUtils.hideSoftKeyboard(mContent);
         if (mName.getText().toString().isEmpty()) {
-            AppContext.showSnackbar(mContent,"当前标题为空");
+            AppContext.showSnackbar(mContent, "当前标题为空");
             return;
         }
         if (mContent.getText().toString().isEmpty()) {
-            AppContext.showSnackbar(mContent,"当前内容为空");
+            AppContext.showSnackbar(mContent, "当前内容为空");
             return;
         }
 
-        mPresenter.save(mName.getText().toString(),mContent.getText().toString());
+        mPresenter.save(mName.getText().toString(), mContent.getText().toString());
 
         BottomSheet.Builder builder = new BottomSheet.Builder(getActivity());
 //        builder.setTitle(R.string.bottom_sheet_title);
@@ -282,7 +283,7 @@ public class EditorFragment extends BaseFragment implements IEditorFragmentView,
         shareIntent.putExtra(Intent.EXTRA_TEXT, mContent.getText().toString());
         shareIntent.setType("text/plain");
 
-        BottomSheet.Builder builder = new BottomSheet.Builder(getActivity(),R.style.AppTheme);
+        BottomSheet.Builder builder = new BottomSheet.Builder(getActivity(), R.style.AppTheme);
         builder.setIntent(getActivity(), shareIntent);
         BottomSheet bottomSheet = builder.create();
         bottomSheet.show();
@@ -313,10 +314,12 @@ public class EditorFragment extends BaseFragment implements IEditorFragmentView,
     }
 
     public void noSave() {
+        if (mActionSave == null) return;
         mActionSave.setIcon(R.drawable.ic_action_unsave);
     }
 
     public void saved() {
+        if (mActionSave == null) return;
         mActionSave.setIcon(R.drawable.ic_action_save);
     }
 

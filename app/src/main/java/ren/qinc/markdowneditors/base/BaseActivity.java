@@ -1,3 +1,19 @@
+/*
+ * Copyright 2016. SHENQINCI(沈钦赐)<946736079@qq.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package ren.qinc.markdowneditors.base;
 
 import android.content.Context;
@@ -29,7 +45,6 @@ import com.umeng.analytics.MobclickAgent;
 import java.lang.reflect.Field;
 
 import butterknife.ButterKnife;
-
 import ren.qinc.markdowneditors.AppManager;
 import ren.qinc.markdowneditors.event.RxEvent;
 import ren.qinc.markdowneditors.event.RxEventBus;
@@ -60,9 +75,6 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 //            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectAll().penaltyLog().build());
 //        }
         if (isNeedLogin()) {//如果子类返回true,代表当前界面需要登录才能进去
-//            AppContext.showToast("请先登录");
-            //跳到登录界面
-            //xxxx
             finish();
         }
         registerEvent();
@@ -249,55 +261,19 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
             inputManager.hideSoftInputFromWindow(editTextTemp.getWindowToken(), 0);
         }
     }
-//
-//    /**
-//     * 代替findViewById 自动类型转换
-//     *
-//     * @param <T> the type parameter
-//     * @param id  the id
-//     * @return t
-//     */
-//    @SuppressWarnings("unchecked")
-//    @Deprecated
-//    protected final <T extends View> T findView(@IdRes int id) {
-//        return (T) findViewById(id);
-//    }
-//
-//    /**
-//     * 设置view的点击事件
-//     * Set view click listener t.
-//     *
-//     * @param <T>           the type parameter
-//     * @param v             the v
-//     * @param clickListener the click listener
-//     * @return the t
-//     */
-//    protected final <T extends View> T setViewClickListener(T v, @NonNull View.OnClickListener clickListener) {
-//        v.setOnClickListener(clickListener);
-//        return v;
-//    }
-//
-//    /**
-//     * Set view click listener by id t.
-//     *
-//     * @param <T>           the type parameter
-//     * @param id            the id
-//     * @param clickListener the click listener
-//     * @return the t
-//     */
-//    @SuppressWarnings("unchecked")
-//    protected final <T extends View> T setViewClickListenerById(@IdRes int id, @NonNull View.OnClickListener clickListener) {
-//        return setViewClickListener((T) findView(id), clickListener);
-//    }
-
 
     @Override
     public void onSupportActionModeStarted(ActionMode mode) {
         super.onSupportActionModeStarted(mode);
-        //Call this method
         fixActionModeCallback(this, mode);
     }
 
+    /**
+     * 修复长按文本启动系统的复制粘贴ActionMode的状态栏颜色
+     *
+     * @param activity
+     * @param mode
+     */
     private void fixActionModeCallback(AppCompatActivity activity, ActionMode mode) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
             return;

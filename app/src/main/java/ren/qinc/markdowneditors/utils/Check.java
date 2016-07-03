@@ -62,13 +62,15 @@ public class Check {
     public static boolean isNull(Object o) {
         return o == null;
     }
-    public static void CheckNull(Object o,String message) {
-        if(o == null)throw new IllegalStateException(message);
+
+    public static void CheckNull(Object o, String message) {
+        if (o == null) throw new IllegalStateException(message);
     }
 
     /**
      * 判断给定字符串是否空白串。 空白串是指由空格、制表符、回车符、换行符组成的字符串 若输入字符串为null或空字符串，返回true
-     *ViewRoot
+     * ViewRoot
+     *
      * @param input
      * @return boolean
      */

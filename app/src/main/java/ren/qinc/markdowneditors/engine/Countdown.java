@@ -22,8 +22,9 @@ import android.os.CountDownTimer;
  * 倒计时封装(后面定时保存用)
  * Created by 沈钦赐 on 16/1/5.
  */
-public class Countdown extends CountDownTimer{
+public class Countdown extends CountDownTimer {
     private CountdownListener listener;
+
     /**
      * @param millisInFuture    The number of millis in the future from the call
      *                          to {@link #start()} until the countdown is done and {@link #onFinish()}
@@ -42,7 +43,7 @@ public class Countdown extends CountDownTimer{
      * @param s 秒数
      */
     public Countdown(long s, CountdownListener listener) {
-        this(s*1000, 1000);
+        this(s * 1000, 1000);
         this.listener = listener;
     }
 
@@ -52,7 +53,7 @@ public class Countdown extends CountDownTimer{
 
     @Override
     public void onTick(long millisUntilFinished) {
-        if(listener!=null){
+        if (listener != null) {
             listener.onUpdate(millisUntilFinished);
         }
 
@@ -60,7 +61,7 @@ public class Countdown extends CountDownTimer{
 
     @Override
     public void onFinish() {
-        if(listener!=null){
+        if (listener != null) {
             listener.onFinish();
         }
 
@@ -71,16 +72,18 @@ public class Countdown extends CountDownTimer{
      * 取消回调
      * Set cancel.
      */
-    public void setCancel(){
+    public void setCancel() {
         super.cancel();
-        if(listener!=null){
+        if (listener != null) {
             listener.onCancle();
         }
     }
 
-    interface CountdownListener{
+    interface CountdownListener {
         void onUpdate(long millis);
+
         void onFinish();
+
         void onCancle();
     }
 }

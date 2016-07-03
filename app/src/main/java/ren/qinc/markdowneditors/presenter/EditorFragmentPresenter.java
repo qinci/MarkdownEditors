@@ -19,24 +19,22 @@ package ren.qinc.markdowneditors.presenter;
 
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
-import android.widget.EditText;
 
 import java.io.File;
-import java.util.Stack;
 
 import ren.qinc.markdowneditors.base.mvp.BasePresenter;
-import rx.functions.Action1;
 
 /**
  * 编辑界面Presenter
  * Created by 沈钦赐 on 16/1/18.
  */
 public class EditorFragmentPresenter extends BasePresenter<IEditorFragmentView> {
+    //当前文件路径
     private String filePath;
+    //当前本地文件名字(如果创建,则为"",可以和当前标题输入框的值不同)
     private String fileName;
+    //时候为新创建文件
     private boolean isCreateFile;
-
-    private Stack<String> fileStack = new Stack<>();
 
     public EditorFragmentPresenter(File file) {
         if (file.isDirectory()) {
@@ -50,6 +48,9 @@ public class EditorFragmentPresenter extends BasePresenter<IEditorFragmentView> 
     }
 
 
+    /**
+     * 加载当前文件
+     */
     public void loadFile() {
         mCompositeSubscription.add(mDataManager.readFile(getMDFile())
                 .subscribe(content -> {
@@ -68,6 +69,9 @@ public class EditorFragmentPresenter extends BasePresenter<IEditorFragmentView> 
 
     private boolean textChanged = false;
 
+    /**
+     * 刷新保存图标的状态
+     */
     public void refreshMenuIcon() {
         if (getMvpView() != null) return;
         if (textChanged)
@@ -85,10 +89,23 @@ public class EditorFragmentPresenter extends BasePresenter<IEditorFragmentView> 
 
     }
 
+    /**
+     * 保存当前内容
+     *
+     * @param name    the name
+     * @param content the content
+     */
     public void save(String name, String content) {
         saveForExit(name, content, false);
     }
 
+    /**
+     * 保存当前内容并退出
+     *
+     * @param name    the name
+     * @param content the content
+     * @param exit    the exit
+     */
     public void saveForExit(String name, String content, boolean exit) {
         if (TextUtils.isEmpty(name)) {
             callFailure(-1, "名字不能为空", IEditorFragmentView.CALL_SAVE);

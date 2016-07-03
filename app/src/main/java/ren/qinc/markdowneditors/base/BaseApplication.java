@@ -1,3 +1,19 @@
+/*
+ * Copyright 2016. SHENQINCI(沈钦赐)<946736079@qq.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package ren.qinc.markdowneditors.base;
 
 import android.app.Application;
@@ -70,10 +86,6 @@ public abstract class BaseApplication extends Application {
         super.onTerminate();
         AppManager.getAppManager().AppExit(this);
     }
-    //------------SharedPreferences操作封装
-
-
-    // ----------- resource资源操作相关
 
     /**
      * 根据资源返回String值
@@ -114,6 +126,7 @@ public abstract class BaseApplication extends Application {
         snackbar.show();
         return snackbar;
     }
+
     public static Snackbar showSnackbar(@NonNull View view, @NonNull int messageRes, @Snackbar.Duration int duration, @Nullable View.OnClickListener listener, @Nullable String actionStr) {
         Snackbar snackbar = Snackbar.make(view, messageRes, duration);
         if (listener != null && Check.isEmpty(actionStr)) {
@@ -126,6 +139,7 @@ public abstract class BaseApplication extends Application {
     public static Snackbar showSnackbar(@NonNull View view, @NonNull String message) {
         return showSnackbar(view, message, Snackbar.LENGTH_SHORT, null, null);
     }
+
     public static Snackbar showSnackbar(@NonNull View view, @StringRes int messageRes) {
         return showSnackbar(view, messageRes, Snackbar.LENGTH_SHORT, null, null);
     }
@@ -149,6 +163,7 @@ public abstract class BaseApplication extends Application {
     public static Snackbar showSnackbarIndefinite(@NonNull View view, @NonNull String message, @Nullable View.OnClickListener listener, @Nullable String actionStr) {
         return showSnackbar(view, message, Snackbar.LENGTH_INDEFINITE, listener, actionStr);
     }
+
     public static Snackbar showSnackbar(@NonNull View view, @NonNull String message, @Nullable View.OnClickListener listener) {
         return showSnackbar(view, message, Snackbar.LENGTH_SHORT, listener, "确定");
     }

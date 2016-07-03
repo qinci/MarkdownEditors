@@ -37,11 +37,12 @@ public class Network {
     private static final String TAG = Network.class.getSimpleName();
 
     private Context context;
+
     public static Network getInstance() {
         return NetworkInstance.getNetwork();
     }
 
-    public void initContext(Context context){
+    public void initContext(Context context) {
         this.context = context;
     }
 
@@ -256,7 +257,7 @@ public class Network {
 
     /**
      * get connected network type by {@link ConnectivityManager}
-     * <p/>
+     * <p>
      * such as WIFI, MOBILE, ETHERNET, BLUETOOTH, etc.
      *
      * @return {@link ConnectivityManager#TYPE_WIFI}, {@link ConnectivityManager#TYPE_MOBILE},
@@ -272,7 +273,7 @@ public class Network {
 
     /**
      * get network type by {@link TelephonyManager}
-     * <p/>
+     * <p>
      * such as 2G, 3G, 4G, etc.
      *
      * @return {@link TelephonyManager#NETWORK_TYPE_CDMA}, {@link TelephonyManager#NETWORK_TYPE_GPRS},

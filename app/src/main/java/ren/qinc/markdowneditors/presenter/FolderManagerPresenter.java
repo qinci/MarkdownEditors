@@ -19,12 +19,10 @@ import rx.Subscriber;
  * Created by 沈钦赐 on 16/1/18.
  */
 public class FolderManagerPresenter extends BasePresenter<IFolderManagerView> {
-    private int currentPosition = 0;
     private Stack<String> fileStack = new Stack<>();
     private List<FileBean> files = new ArrayList<>();
     /**
      * 用来保存FileBean缓存，可以用来复制粘贴等操作
-     * The Temp.
      */
     private List<FileBean> temp;
 

@@ -22,10 +22,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
 
 import ren.qinc.markdowneditors.utils.ColorUtils;
-import ren.qinc.markdowneditors.utils.SystemBarUtils;
 
 /**
  * ActionMode回调 状态栏又要保持透明，又要有颜色
@@ -41,7 +39,7 @@ public abstract class ActionModeCallback implements ActionMode.Callback {
     private int mActionModeStatusBarColor = 0;
 
     protected ActionModeCallback(@NonNull Activity activity, @ColorRes int actionModeStatusBarColorRes) {
-        this.mActionModeStatusBarColor = ColorUtils.getAlphaColor( activity.getResources().getColor(actionModeStatusBarColorRes), (int) ((1-DEFAULT_ALPHA)*255));
+        this.mActionModeStatusBarColor = ColorUtils.getAlphaColor(activity.getResources().getColor(actionModeStatusBarColorRes), (int) ((1 - DEFAULT_ALPHA) * 255));
         this.mActivity = activity;
     }
 

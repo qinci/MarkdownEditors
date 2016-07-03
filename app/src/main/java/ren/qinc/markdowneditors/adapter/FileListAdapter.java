@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,10 +52,11 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.FileVi
         initColor();
     }
 
-    public void addData(int position,FileBean fileBean) {
+    public void addData(int position, FileBean fileBean) {
         mDatas.add(position, fileBean);
         notifyItemInserted(position);
     }
+
     public void removeData(FileBean file) {
         int position = mDatas.indexOf(file);
         mDatas.remove(position);
@@ -109,7 +109,7 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.FileVi
 
         //选择模式 颜色设置
         if (bean.isSelect) {//选择了
-            if(colorFilter == null)
+            if (colorFilter == null)
                 colorFilter = new PorterDuffColorFilter(colorPrimary, PorterDuff.Mode.SRC_IN);
 
             holder.itemView.setBackgroundColor(alphaColorPrimary);

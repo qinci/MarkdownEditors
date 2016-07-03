@@ -24,6 +24,7 @@ import java.util.List;
 import ren.qinc.markdowneditors.R;
 
 /**
+ * 可以展开收缩View
  * from https://github.com/cachapa/ExpandableLayout/blob/master/lib/src/main/java/net/cachapa/expandablelayout/ExpandableLinearLayout.java
  */
 public class ExpandableLinearLayout extends LinearLayout {
@@ -290,16 +291,16 @@ public class ExpandableLinearLayout extends LinearLayout {
 
     private void setHeight(View view, int targetHeight) {
         LayoutParams lp = (LayoutParams) view.getLayoutParams();
-        
+
         if (targetHeight == 0) {
             view.setVisibility(GONE);
         } else {
             lp.height = lp.originalHeight;
             lp.weight = lp.originalWeight;
-            
+
             view.requestLayout();
         }
-        
+
         if (listener != null) {
             listener.onExpansionUpdate(targetHeight == 0 ? 0f : 1f);
         }

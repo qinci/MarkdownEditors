@@ -162,7 +162,7 @@ public class AppManager {
             return false;
         }
 
-        if(activityStack==null){
+        if (activityStack == null) {
             return false;
         }
         return activityStack.remove(activity);

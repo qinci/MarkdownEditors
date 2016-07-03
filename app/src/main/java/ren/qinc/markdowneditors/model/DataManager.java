@@ -12,7 +12,6 @@ import ren.qinc.markdowneditors.utils.FileUtils;
 import ren.qinc.markdowneditors.utils.RxUtils;
 import rx.Observable;
 import rx.Subscriber;
-import rx.functions.Func1;
 
 /**
  * Model统一数据管理
@@ -61,8 +60,8 @@ public class DataManager {
     /**
      * 保存文件
      *
-     * @param file the file path
-     * @param content  the content
+     * @param file    the file path
+     * @param content the content
      * @return the observable
      */
     public Observable<Boolean> saveFile(@NonNull File file, @NonNull String content) {

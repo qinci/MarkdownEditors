@@ -62,11 +62,11 @@ public class TabView extends HorizontalScrollView {
         mLayout = new LinearLayout(getContext());
         mLayout.setPadding(1, 0, 1, 0);
         mLayout.setOrientation(LinearLayout.HORIZONTAL);
-        addView(mLayout,params);
+        addView(mLayout, params);
     }
 
 
-    public void addTab(String title,OnClickListener onClickListener) {
+    public void addTab(String title, OnClickListener onClickListener) {
         View view = mInflater.inflate(R.layout.item_tab_text, mLayout, false);
         TextView textView = (TextView) view.findViewById(R.id.file_name);
         textView.setOnClickListener(onClickListener);
