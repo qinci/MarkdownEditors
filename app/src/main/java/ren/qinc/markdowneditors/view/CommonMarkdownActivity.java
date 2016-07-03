@@ -35,6 +35,7 @@ import ren.qinc.markdowneditors.widget.MarkdownPreviewView;
 
 
 /**
+ * 通用MarkdownEditor查看器
  * Created by 沈钦赐 on 16/6/30.
  */
 public class CommonMarkdownActivity extends BaseToolbarActivity implements MarkdownPreviewView.OnLoadingFinishListener {

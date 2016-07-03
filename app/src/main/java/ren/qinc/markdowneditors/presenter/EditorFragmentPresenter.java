@@ -50,15 +50,15 @@ public class EditorFragmentPresenter extends BasePresenter<IEditorFragmentView> 
     }
 
 
-
     public void loadFile() {
-        mDataManager.readFile(getMDFile())
+        mCompositeSubscription.add(mDataManager.readFile(getMDFile())
                 .subscribe(content -> {
                     if (getMvpView() == null) return;
                     getMvpView().onReadSuccess(fileName, content);
                 }, throwable -> {
                     callFailure(-1, throwable.getMessage(), IEditorFragmentView.CALL_LOAOD_FILE);
-                });
+                }));
+
     }
 
     @NonNull
@@ -90,11 +90,11 @@ public class EditorFragmentPresenter extends BasePresenter<IEditorFragmentView> 
     }
 
     public void saveForExit(String name, String content, boolean exit) {
-        if(TextUtils.isEmpty(name)){
+        if (TextUtils.isEmpty(name)) {
             callFailure(-1, "名字不能为空", IEditorFragmentView.CALL_SAVE);
             return;
         }
-        if ( content == null) return;
+        if (content == null) return;
 
         //上一次文件名为空
         if (TextUtils.isEmpty(fileName)) {
@@ -133,6 +133,8 @@ public class EditorFragmentPresenter extends BasePresenter<IEditorFragmentView> 
             } else {
                 callFailure(-1, "保存失败", IEditorFragmentView.CALL_SAVE);
             }
+        }, throwable -> {
+            callFailure(-1, "保存失败", IEditorFragmentView.CALL_SAVE);
         });
     }
 
@@ -149,7 +151,7 @@ public class EditorFragmentPresenter extends BasePresenter<IEditorFragmentView> 
             //重命名
             File oldFile = getMDFile();
             File newPath = new File(filePath, newName + suffix);
-            if(oldFile.getAbsolutePath().equals(newPath.getAbsolutePath()))return true;
+            if (oldFile.getAbsolutePath().equals(newPath.getAbsolutePath())) return true;
 
             fileName = newPath.getName();
 

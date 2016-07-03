@@ -122,10 +122,6 @@ public class EditorFragment extends BaseFragment implements IEditorFragmentView,
         //装置数据
         if (file.isFile())
             mPresenter.loadFile();
-//        mContent.setText("123456789");
-//        Editable editableText = mContent.getEditableText();
-//        editableText.append("00000");
-//        editableText.replace(0, 3, "tes");
     }
 
     @Override

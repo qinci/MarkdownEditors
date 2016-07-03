@@ -22,6 +22,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.TextView;
 
 import butterknife.Bind;
@@ -50,8 +51,8 @@ public class AboutActivity extends BaseToolbarActivity {
         return R.layout.activity_about;
     }
 
-    public static void startAboutActivity(Context context){
-        Intent intent = new Intent(context,AboutActivity.class);
+    public static void startAboutActivity(Context context) {
+        Intent intent = new Intent(context, AboutActivity.class);
         context.startActivity(intent);
     }
 
@@ -63,10 +64,10 @@ public class AboutActivity extends BaseToolbarActivity {
     @Override
     public void onCreateAfter(Bundle savedInstanceState) {
         version.setText(String.format(getString(R.string.version_string), SystemUtils.getAppVersion(mContext)));
-        String fromAssets = SystemUtils.getAssertString(mContext.getApplicationContext(),"description.txt");
-        if(TextUtils.isEmpty(fromAssets)){
+        String fromAssets = SystemUtils.getAssertString(mContext.getApplicationContext(), "description.txt");
+        if (TextUtils.isEmpty(fromAssets)) {
             description.setText("MarkdownEditors");
-        }else{
+        } else {
 
             description.setText(fromAssets);
         }
@@ -74,7 +75,7 @@ public class AboutActivity extends BaseToolbarActivity {
 
     @Override
     protected void initStatusBar() {
-        SystemBarUtils.tintStatusBar(this,getResources().getColor(R.color.colorPrimary));
+        SystemBarUtils.tintStatusBar(this, getResources().getColor(R.color.colorPrimary));
     }
 
     @Override
@@ -83,37 +84,34 @@ public class AboutActivity extends BaseToolbarActivity {
     }
 
 
-    @OnClick(R.id.contact_me)
-    protected void contackMe(){
-        Uri uri = Uri.parse(MAIL);
-        Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
-        //intent.putExtra(Intent.EXTRA_CC, email); // 抄送人
-         intent.putExtra(Intent.EXTRA_SUBJECT, "MarkdownEditor用户"); // 主题
-        // intent.putExtra(Intent.EXTRA_TEXT, "这是邮件的正文部分"); // 正文
-        try {
-            this.startActivity(intent);
-        }catch (Exception e){
-            AppContext.showSnackbar(getWindow().getDecorView(),"找不到邮箱应用!");
+    @OnClick({R.id.contact_me, R.id.ad_contact_me})
+    protected void contackMe(View v) {
+        String subject = null;
+        switch (v.getId()) {
+            case R.id.ad_contact_me:
+                subject = "广告联系";
+                break;
+            default:
+                subject = "MarkdownEditor用户";
+                break;
         }
-    }
-    @OnClick(R.id.ad_contact_me)
-    protected void adContackMe(){
+
         Uri uri = Uri.parse(MAIL);
         Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
         //intent.putExtra(Intent.EXTRA_CC, email); // 抄送人
-         intent.putExtra(Intent.EXTRA_SUBJECT, "广告联系"); // 主题
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject); // 主题
         // intent.putExtra(Intent.EXTRA_TEXT, "这是邮件的正文部分"); // 正文
         try {
-            this.startActivity(intent);
-        }catch (Exception e){
-            AppContext.showSnackbar(getWindow().getDecorView(),"找不到邮箱应用!");
+            startActivity(intent);
+        } catch (Exception e) {
+            AppContext.showSnackbar(getWindow().getDecorView(), "找不到邮箱应用!");
         }
     }
 
 
     @OnClick(R.id.about_github)
-    protected void openSource(){
-        BaseWebActivity.loadUrl(this,"https://github.com/qinci/MarkdownEditors","源码地址");
+    protected void openSource() {
+        BaseWebActivity.loadUrl(this, "https://github.com/qinci/MarkdownEditors", "源码地址");
     }
 
     @NonNull
