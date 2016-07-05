@@ -77,6 +77,7 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.FileVi
         this.mOnItemClickLitener = mOnItemClickLitener;
     }
 
+
     @Override
     public FileViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_file_list, parent, false);

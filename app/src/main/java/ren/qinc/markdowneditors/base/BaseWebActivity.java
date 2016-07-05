@@ -312,13 +312,15 @@ public class BaseWebActivity extends BaseToolbarActivity {
     }
 
     public void switchScreenConfiguration(MenuItem item) {
-        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+        Configuration configuration = this.getResources().getConfiguration();
+        if (configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
             this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE);
             if (item != null) item.setTitle(this.getString(R.string.menu_web_vertical));
         } else {
             this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT);
             if (item != null) item.setTitle(this.getString(R.string.menu_web_horizontal));
         }
+//        getResources().updateConfiguration(configuration,null);
     }
 
     @Override

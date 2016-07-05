@@ -75,7 +75,7 @@ public class Countdown extends CountDownTimer {
     public void setCancel() {
         super.cancel();
         if (listener != null) {
-            listener.onCancle();
+            listener.onCancel();
         }
     }
 
@@ -84,6 +84,6 @@ public class Countdown extends CountDownTimer {
 
         void onFinish();
 
-        void onCancle();
+        void onCancel();
     }
 }
