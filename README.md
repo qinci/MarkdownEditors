@@ -1,6 +1,5 @@
 ![首页列表](image/logo.png)
 ## MarkdownEditors
-[应用下载](http://fir.im/mde)
 
 [应用宝市场下载地址](http://android.app.qq.com/myapp/detail.htm?apkName=ren.qinc.markdowneditors)
 
@@ -11,6 +10,8 @@
 [安卓市场下载地址](http://apk.hiapk.com/appinfo/ren.qinc.markdowneditors/1)
 
 [小米应用商店下载地址](http://app.mi.com/detail/422745)
+
+~~[应用下载](http://fir.im/mde)~~
 
 基于Android的Markdown编辑器
 
