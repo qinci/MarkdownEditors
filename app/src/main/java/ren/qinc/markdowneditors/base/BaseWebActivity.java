@@ -96,6 +96,8 @@ public class BaseWebActivity extends BaseToolbarActivity {
     protected void onDestroy() {
         ButterKnife.unbind(this);
         if (mWebView != null) {
+            mWebView.pauseTimers();
+            mWebView.stopLoading();
             mWebView.setFocusable(true); //
             mWebView.removeAllViews();
             mWebView.clearHistory();
@@ -282,7 +284,8 @@ public class BaseWebActivity extends BaseToolbarActivity {
     @Override
     public void setTitle(CharSequence title) {
         super.setTitle(title);
-        mTextSwitcher.setText(title);
+        if (mTextSwitcher != null)
+            mTextSwitcher.setText(title);
     }
 
 
