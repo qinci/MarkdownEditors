@@ -18,10 +18,13 @@ package ren.qinc.markdowneditors.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.os.Build.VERSION;
 import android.support.v4.widget.NestedScrollView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -127,6 +130,18 @@ public class MarkdownPreviewView extends NestedScrollView {
                 BaseWebActivity.loadUrl(webView.getContext(), url, null);
             return true;
         }
+    }
+
+    /**
+     * 截屏
+     *
+     * @return
+     */
+    public Bitmap getScreen() {
+        Bitmap bmp = Bitmap.createBitmap(mWebView.getWidth(), mWebView.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bmp);
+        mWebView.draw(canvas);
+        return bmp;
     }
 
 }
