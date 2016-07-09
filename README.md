@@ -1,4 +1,4 @@
-![首页列表](image/logo.png)
+![logo](logo)
 ## MarkdownEditors
 
 [91市场下载地址](http://apk.91.com/Soft/Android/ren.qinc.markdowneditors-1-0.1.html)
@@ -56,11 +56,11 @@
 
 已完成功能的截图
 ---
-![Image](image/image_new_01.jpg)
-![Image](image/image_new_02.jpg)
-![Image](image/image_new_05.jpg)
-![Image](image/image_new_03.jpg)
-![Image](image/image_new_04.jpg)
+![Image](image_new_01)
+![Image](image_new_02)
+![Image](image_new_05)
+![Image](image_new_03)
+![Image](image_new_04)
  
 
 #### 动态图
