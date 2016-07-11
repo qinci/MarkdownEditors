@@ -1,5 +1,5 @@
 /*
- * Copyright 2016. SHENQINCI(沈钦赐)<946736079@qq.com>
+ * Copyright 2016. SHENQINCI(沈钦赐)<dev@qinc.me>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,6 @@ import android.os.Build.VERSION;
 import android.support.v4.widget.NestedScrollView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
