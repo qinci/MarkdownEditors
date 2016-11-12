@@ -132,8 +132,9 @@ public class PerformInputAfter {
 
         if (mString.startsWith("* ") && mString.length() > 2) {//* 开头
             editable.insert(start + 1, startSpace + "* ");
-        } else if (mString.startsWith("1. ") && mString.length() > 3) {//1. 开头
-            editable.insert(start + 1, startSpace + "1. ");
+        }  else if (mString.matches("\\s*[1-9]+[0-9]*\\.\\s.+")) {//1. 开头
+            int currentNum = Integer.parseInt(mString.substring(0, mString.indexOf('.')).trim());
+            editable.insert(start + 1, startSpace + (++currentNum + ". "));
         } else if (mString.length() > 1) {
             editable.insert(start + 1, startSpace);
         }
