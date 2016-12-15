@@ -89,7 +89,7 @@ dependencies {
     compile 'com.kaopiz:kprogresshud:1.0.5'
 
     compile 'com.github.michael-rapp:android-bottom-sheet:1.3.0'
-    compile 'ren.qinc.edit:lib:0.0.3'
+    compile 'ren.qinc.edit:lib:0.0.4'
 }
 repositories {
     mavenCentral()

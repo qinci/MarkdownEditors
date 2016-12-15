@@ -35,6 +35,16 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shadow"/>
 
             <ren.qinc.markdowneditors.lib.ExpandableLinearLayout
                 android:id="@+id/action_other_operate"
@@ -53,16 +63,6 @@
                     app:layout_expandable="true"/>
 
             </ren.qinc.markdowneditors.lib.ExpandableLinearLayout>
-            <android.support.v4.view.ViewPager
-                android:id="@+id/pager"
-                android:background="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/shadow"/>
         </FrameLayout>
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
