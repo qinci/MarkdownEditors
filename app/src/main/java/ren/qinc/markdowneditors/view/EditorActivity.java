@@ -59,24 +59,23 @@ public class EditorActivity extends BaseToolbarActivity implements IEditorActivi
     public static final String SHARED_ELEMENT_COLOR_NAME = "SHARED_ELEMENT_COLOR_NAME";
     private static final String SCHEME_FILE = "file";
     private static final String SCHEME_Folder = "folder";
-    @Bind(R.id.pager)
-    protected ViewPager mViewPager;
 
     private EditorFragment mEditorFragment;
     private EditorMarkdownFragment mEditorMarkdownFragment;
 
+    private String mName;
     private String currentFilePath;
 
     @Bind(R.id.action_other_operate)
     protected ExpandableLinearLayout mExpandLayout;
-    private String mName;
+    @Bind(R.id.pager)
+    protected ViewPager mViewPager;
     private TabIconView mTabIconView;
 
     @Override
     public int getLayoutId() {
         return R.layout.activity_editor;
     }
-
 
     @Override
     public void onCreateAfter(Bundle savedInstanceState) {

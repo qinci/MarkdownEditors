@@ -37,6 +37,7 @@ import rx.Subscriber;
 public class FolderManagerPresenter extends BasePresenter<IFolderManagerView> {
     private Stack<String> fileStack = new Stack<>();
     private List<FileBean> files = new ArrayList<>();
+
     /**
      * 用来保存FileBean缓存，可以用来复制粘贴等操作
      */

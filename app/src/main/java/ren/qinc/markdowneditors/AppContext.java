@@ -21,6 +21,7 @@ import ren.qinc.markdowneditors.base.BaseApplication;
  * Created by 沈钦赐 on 16/1/26.
  */
 public class AppContext extends BaseApplication {
+
     @Override
     protected boolean hasMemoryLeak() {
 //        return BuildConfig.DEBUG;
