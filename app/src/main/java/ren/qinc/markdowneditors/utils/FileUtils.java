@@ -38,6 +38,9 @@ import java.io.OutputStream;
  * Created by 沈钦赐 on 16/1/17.
  */
 public class FileUtils {
+
+    private static int length;
+
     /**
      * 递归删除文件夹
      *
@@ -348,7 +351,8 @@ public class FileUtils {
             File[] temps = oldFile.listFiles();
             File temp;
             boolean flag = true;
-            for (int i = 0; i < temps.length; i++) {
+            length = temps.length;
+            for (int i = 0; i < length; i++) {
                 temp = temps[i];
                 //文件夹里面
                 if (temp.isFile()) {

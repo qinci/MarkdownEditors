@@ -24,11 +24,11 @@ import ren.qinc.markdowneditors.event.RxEvent;
  * Created by 沈钦赐 on 16/1/21.
  */
 public interface EventInterface {
+
     /**
      * 绑定
      */
     void registerEvent();
-
 
     /**
      * 解绑
